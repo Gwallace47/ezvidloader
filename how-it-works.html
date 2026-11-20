@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works – ezvidloader</title>
+<meta name="description" content="Credited GTA 6 highlight clips from Twitch, as YouTube Shorts and TikToks.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta property="og:image" content="https://gwallace47.github.io/ezvidloader/icon-512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><img src="icon-180.png" alt="ezvidloader icon">ezvidloader</a>
+<nav><a href="index.html">Home</a><a href="how-it-works.html" class=on>How it works</a><a href="creators.html">For creators</a><a href="contact.html">Contact</a></nav>
+</div></header>
+
+<div class="doc wrap">
+<h1>How it works</h1>
+<p class="lead">From a multi-hour broadcast to a 30-second clip, step by step.</p>
+
+<h2>1. Watching for GTA 6 streams</h2>
+<p>Using Twitch's public API, ezvidloader checks which streams are live in the Grand Theft Auto VI category. When a
+broadcast ends, the archived stream becomes available to process. Streamers on the opt-out list are skipped.</p>
+
+<h2>2. Finding highlight moments</h2>
+<p>Only the audio of the archived stream is downloaded. The tool measures loudness over time and marks moments where the
+streamer or the game suddenly gets much louder than usual, which is a good sign that something happened. Those moments
+are transcribed on the operator's own computer.</p>
+
+<h2>3. Choosing the best clips</h2>
+<p>Short transcripts of the candidate moments are sent to an AI model (Anthropic's Claude), which picks the moments that
+work best as standalone short videos, sets the exact start and end, and writes a title and a hook. Weak moments are
+dropped instead of posted.</p>
+
+<h2>4. Editing</h2>
+<p>Only the chosen part of the video is fetched. It's reframed to vertical 9:16 with a blurred background, word-by-word
+captions are added, and the streamer's channel (<em>twitch.tv/name</em>) is shown at the top for the whole clip.</p>
+
+<h2>5. Publishing</h2>
+<p>The operator logs in once with <strong>TikTok Login Kit</strong> (scope <code>user.info.basic</code>) so the tool can
+read the account's display name and allowed privacy settings. Clips are then posted to the operator's own TikTok account
+with the <strong>Content Posting API</strong> (scope <code>video.publish</code>), with a caption that credits the streamer
+and relevant hashtags. YouTube Shorts are uploaded the same way with the YouTube Data API.</p>
+
+<h2>What it doesn't do</h2>
+<ul class="check">
+<li>It doesn't post to anyone else's account and has no public sign-up.</li>
+<li>It doesn't re-upload full streams, only short highlights.</li>
+<li>It doesn't collect data about viewers.</li>
+<li>It doesn't keep stream audio: it's deleted after processing.</li>
+</ul>
+</div>
+
+<footer><div class="wrap">
+<div><a class="brand" href="index.html"><img src="icon-180.png" alt="" style="width:28px;height:28px">ezvidloader</a>
+<div style="margin-top:8px">Operated by snapflic · <a href="mailto:snapflic@gmail.com" style="margin:0">snapflic@gmail.com</a></div></div>
+<div><a href="how-it-works.html">How it works</a><a href="creators.html">For creators</a><a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></div>
+</div></footer>
+</body>
+</html>

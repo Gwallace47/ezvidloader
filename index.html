@@ -3,13 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ezvidloader</title>
-<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}</style>
+<title>ezvidloader – GTA 6 highlights, clipped and credited</title>
+<meta name="description" content="Credited GTA 6 highlight clips from Twitch, as YouTube Shorts and TikToks.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta property="og:image" content="https://gwallace47.github.io/ezvidloader/icon-512.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>ezvidloader</h1>
-<p>A private tool that publishes credited GTA 6 highlight clips from public Twitch streams, with
-the streamer credited on every clip, to the @snapflic channels on YouTube and TikTok.</p>
-<p><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:snapflic@gmail.com">snapflic@gmail.com</a></p>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><img src="icon-180.png" alt="ezvidloader icon">ezvidloader</a>
+<nav><a href="index.html" class=on>Home</a><a href="how-it-works.html">How it works</a><a href="creators.html">For creators</a><a href="contact.html">Contact</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+<div>
+<h1>The best GTA 6 stream moments, as short vertical videos.</h1>
+<p>ezvidloader finds the funniest and most surprising moments from GTA 6 streams on Twitch, turns them into
+captioned Shorts and TikToks, and credits the streamer on every clip.</p>
+<a class="btn" href="how-it-works.html">See how it works</a>
+<a class="btn ghost" href="creators.html">For creators</a>
+</div>
+<img src="icon-512.png" alt="ezvidloader app icon">
+</div></div>
+
+<section><div class="wrap">
+<h2>What ezvidloader does</h2>
+<p class="lead">It's a publishing tool used by the snapflic channels on TikTok and YouTube. It does the slow parts
+of clipping: watching hours of footage, finding the highlights, editing them to 9:16 and writing captions.</p>
+<div class="grid">
+<div class="card"><span class="num">1</span><h3>Finds the moments</h3><p>Listens to finished GTA 6 broadcasts for
+spikes in excitement (big reactions, chaos, laughter) and reads what was said around them.</p></div>
+<div class="card"><span class="num">2</span><h3>Edits the clip</h3><p>Cuts a 15–60 second clip, reframes it to vertical
+9:16, and adds word-by-word captions and a short hook at the top.</p></div>
+<div class="card"><span class="num">3</span><h3>Credits and publishes</h3><p>Puts the streamer's channel on screen and in the
+caption, then posts it to the snapflic TikTok and YouTube accounts.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+<div>
+<h2>Built around credit</h2>
+<p class="lead" style="margin-bottom:20px">Clips exist to send viewers back to the streamer.</p>
+<ul class="check">
+<li>The streamer's Twitch channel is shown on screen for the whole clip.</li>
+<li>Every caption links the streamer's channel.</li>
+<li>Creators can opt out with one email and are never clipped again.</li>
+<li>Clips are removed within 48 hours on request.</li>
+<li>Only short highlights are posted, never full streams.</li>
+</ul>
+</div>
+<div class="phone"><div class="screen">
+<div><div class="credit">twitch.tv/streamer</div><div class="hook">He did NOT see that coming</div></div>
+<div class="game">gameplay + facecam</div>
+<div class="cap">WAIT <b>NO WAY</b></div>
+</div></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Where the clips go</h2>
+<p class="lead">ezvidloader publishes only to accounts owned by its operator. It has no sign-up and never
+posts to anyone else's account.</p>
+<div class="grid">
+<div class="card"><h3>TikTok</h3><p>Posts to <strong>@snapflic</strong> through TikTok's official Content Posting API,
+after the operator logs in with Login Kit.</p></div>
+<div class="card"><h3>YouTube Shorts</h3><p>Uploads to the snapflic YouTube channel through the YouTube Data API.</p></div>
+<div class="card"><h3>Posting limits</h3><p>At most 5 clips a day per platform, spaced out through the day, so feeds
+aren't flooded.</p></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><a class="brand" href="index.html"><img src="icon-180.png" alt="" style="width:28px;height:28px">ezvidloader</a>
+<div style="margin-top:8px">Operated by snapflic · <a href="mailto:snapflic@gmail.com" style="margin:0">snapflic@gmail.com</a></div></div>
+<div><a href="how-it-works.html">How it works</a><a href="creators.html">For creators</a><a href="contact.html">Contact</a>
+<a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></div>
+</div></footer>
 </body>
 </html>
